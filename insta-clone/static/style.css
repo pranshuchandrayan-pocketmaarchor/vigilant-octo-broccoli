@@ -1,0 +1,219 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+}
+
+/* Desktop layout */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.left-panel {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+}
+
+.left-panel h1 {
+  font-size: 20px;
+  color: #262626;
+}
+
+.highlight {
+  background: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.right-panel {
+  width: 30%;
+  padding: 20px;
+}
+
+.login-box {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 40px;
+  text-align: center;
+}
+
+.logo {
+  width: 175px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #fafafa;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3897f0;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #3178c6;
+}
+
+.fb-login {
+  background-color: #4267B2;
+  margin-top: 10px;
+}
+
+.create-account {
+  background-color: #42b72a;
+  margin-top: 20px;
+}
+
+.forgot {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #00376b;
+  text-decoration: none;
+}
+
+.divider {
+  margin: 20px 0;
+  position: relative;
+  text-align: center;
+}
+
+.divider span {
+  background-color: #fff;
+  padding: 0 10px;
+  color: #8e8e8e;
+  font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #dbdbdb;
+}
+
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+.meta-logo {
+  width: 80px;
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer ul li {
+  margin: 5px 10px;
+}
+
+footer ul li a {
+  color: #8e8e8e;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* stack panels vertically */
+    align-items: center;    /* keep centered */
+    justify-content: center;
+    height: auto;           /* allow scrolling */
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .promo-img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .login-box {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .tagline {
+    font-size: 18px;
+  }
+
+  input, button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+.footer-bottom {
+  margin-top: 15px;
+  color: #8e8e8e;
+  font-size: 12px;
+}
+
+.language {
+  padding: 5px;
+  font-size: 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+  footer ul {
+    flex-direction: column; /* stack links vertically */
+    align-items: center;
+  }
+
+  footer ul li {
+    margin: 5px 0;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .language {
+    width: 100%; /* full width dropdown on mobile */
+    max-width: 200px;
+  }
+}
